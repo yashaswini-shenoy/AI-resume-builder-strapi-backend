@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_positions_positions",
+  "info": {
+    "displayName": "positions",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "x": {
+      "type": "float"
+    },
+    "y": {
+      "type": "float"
+    }
+  }
+}

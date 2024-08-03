@@ -12,6 +12,22 @@ export interface SkillsSkills extends Schema.Component {
   };
 }
 
+export interface SectionPositionsSectionPositions extends Schema.Component {
+  collectionName: 'components_section_positions_section_positions';
+  info: {
+    displayName: 'SectionPositions';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    a: Attribute.Component<'positions.positions'>;
+    b: Attribute.Component<'positions.positions'>;
+    c: Attribute.Component<'positions.positions'>;
+    d: Attribute.Component<'positions.positions'>;
+    e: Attribute.Component<'positions.positions'>;
+  };
+}
+
 export interface ExperienceExperience extends Schema.Component {
   collectionName: 'components_experience_experiences';
   info: {
@@ -26,6 +42,18 @@ export interface ExperienceExperience extends Schema.Component {
     endDate: Attribute.String & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     workSummery: Attribute.Text;
+  };
+}
+
+export interface PositionsPositions extends Schema.Component {
+  collectionName: 'components_positions_positions';
+  info: {
+    displayName: 'positions';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    x: Attribute.Float;
+    y: Attribute.Float;
   };
 }
 
@@ -50,7 +78,9 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'skills.skills': SkillsSkills;
+      'section-positions.section-positions': SectionPositionsSectionPositions;
       'experience.experience': ExperienceExperience;
+      'positions.positions': PositionsPositions;
       'education.education': EducationEducation;
     }
   }

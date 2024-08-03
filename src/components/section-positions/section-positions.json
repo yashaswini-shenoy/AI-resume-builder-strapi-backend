@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_section_positions_section_positions",
+  "info": {
+    "displayName": "SectionPositions",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "a": {
+      "type": "component",
+      "repeatable": false,
+      "component": "positions.positions"
+    },
+    "b": {
+      "type": "component",
+      "repeatable": false,
+      "component": "positions.positions"
+    },
+    "c": {
+      "type": "component",
+      "repeatable": false,
+      "component": "positions.positions"
+    },
+    "d": {
+      "type": "component",
+      "repeatable": false,
+      "component": "positions.positions"
+    },
+    "e": {
+      "type": "component",
+      "repeatable": false,
+      "component": "positions.positions"
+    }
+  }
+}

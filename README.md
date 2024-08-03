@@ -1,61 +1,151 @@
-# 🚀 Getting started with Strapi
+# AI Resume Builder
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Table of Contents
 
-### `develop`
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Project Overview
 
-```
-npm run develop
-# or
-yarn develop
-```
+The AI Resume Builder is a web application designed to assist users in creating professional resumes with the help of AI. Users can add, edit, delete, share, and download their resumes. The application provides AI-generated suggestions for job descriptions, education details, and summaries based on the user's input, ensuring crisp and effective wording.
 
-### `start`
+## Features
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+- **Add New Resumes**: Users can create new resumes.
+- **Edit Existing Resumes**: Modify any section of an existing resume.
+- **Delete Resumes**: Remove any resume that is no longer needed.
+- **Share and Download**: Share resumes via a link or download them as a PDF.
+- **Theme Customization**: Users can choose and edit the resume theme.
+- **AI Suggestions**: Get AI-generated suggestions for job descriptions, education details, and summaries.
+- **Resume Sections**:
+  - Personal Info
+  - Skills
+  - Education
+  - Experience
+  - Summary
 
-```
-npm run start
-# or
-yarn start
-```
+## Technologies Used
 
-### `build`
+- **Frontend**: React
+- **Backend**: Strapi CMS, Postgres
+- **Deployment**: Render.com
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+## Installation
 
-```
-npm run build
-# or
-yarn build
-```
+### Prerequisites
 
-## ⚙️ Deployment
+- Node.js
+- npm or yarn
+- PostgreSQL
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+### Steps
 
-```
-yarn strapi deploy
-```
+1. **Clone the repository**:
 
-## 📚 Learn more
+   ```bash
+   git clone https://github.com/your-username/ai-resume-builder.git
+   cd ai-resume-builder
+   ```
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+<!-- 2. **Backend Setup**:
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+   - Navigate to the backend directory:
+     ```bash
+     cd backend
+     ```
+   - Install dependencies:
+     ```bash
+     npm install
+     ```
+   - Set up the PostgreSQL database and configure the environment variables in `.env` file:
+     ```env
+     DATABASE_HOST=your-database-host
+     DATABASE_PORT=your-database-port
+     DATABASE_NAME=your-database-name
+     DATABASE_USERNAME=your-database-username
+     DATABASE_PASSWORD=your-database-password
+     ```
+   - Start the backend server:
+     ```bash
+     npm run develop
+     ``` -->
 
-## ✨ Community
+2. **Frontend Setup**:
+   - Navigate to the frontend directory:
+     ```bash
+     cd frontend
+     ```
+   - Install dependencies:
+     ```bash
+     npm install
+     ```
+   - Configure the environment variables in `.env` file:
+     ```env
+     REACT_APP_API_URL=your-backend-url
+     ```
+   - Start the frontend server:
+     ```bash
+     npm start
+     ```
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+## Usage
 
----
+1. **Create an Account**: Sign up to start creating resumes.
+2. **Add Personal Info**: Fill in your personal details.
+3. **Add Skills**: List your skills.
+4. **Add Education**: Provide your educational background.
+5. **Add Experience**: Detail your work experience.
+6. **Add Summary**: Write a summary of your qualifications and objectives.
+7. **AI Suggestions**: Use the AI feature to get suggestions for descriptions.
+8. **Customize Theme**: Choose and customize the resume theme.
+9. **Download or Share**: Download your resume as a PDF or share it via a link.
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## API Endpoints
+
+### Authentication
+
+- `POST /auth/local/register`: Register a new user.
+- `POST /auth/local`: Login a user.
+
+### Resumes
+
+- `GET /resumes`: Get all resumes for the authenticated user.
+- `POST /resumes`: Create a new resume.
+- `PUT /resumes/:id`: Update an existing resume.
+- `DELETE /resumes/:id`: Delete a resume.
+
+### Sections
+
+- `GET /sections`: Get all sections of a resume.
+- `POST /sections`: Create a new section in a resume.
+- `PUT /sections/:id`: Update an existing section.
+- `DELETE /sections/:id`: Delete a section.
+
+## Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please reach out to:
+
+- Name: [Your Name]
+- Email: [your-email@example.com]
+- LinkedIn: [Your LinkedIn Profile]
